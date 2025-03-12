@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+ 
+<title> Updates </title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+
+<!--------------------JAVASCRIPTS-------------------->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:69,
+tip_fade_speed:0,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,500|Inter:300,400,500|Rubik:400" rel="stylesheet">
+
+<link href="//honeybeeicons.gitlab.io/backup/icons.css" rel="stylesheet" crossorigin>
+
+<script src="//glen-themes.gitlab.io/chara-pages/06/raison-d'etre.js"></script>
+<!------------------------------------------------->
+ 
+<style type="text/css">
+ 
+/*-------------TOOLTIPS-------------*/
+#s-m-t-tooltip {
+    margin:20px;
+    padding:6px 11px;
+    background:var(--TopLinks-Accent-Color);
+    font-family:inter;
+    font-size:calc(var(--TopLinks-Font-Size) - 2.5px);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--TopLinks-Background);
+    z-index:99;
+    line-height:1.75em;
+    max-width:40vw;
+}
+ 
+/*-------------TUMBLR CONTROLS-------------*/
+iframe#tumblr_controls, .iframe-controls--desktop {
+    position:fixed!important;
+    top:0!important;
+    margin-top:calc(var(--Screen-Padding) * 0.8)!important;
+    right:0!important;
+    margin-right:calc(var(--Screen-Padding) * 0.8)!important;
+    
+    transform:scale(0.75,0.75);
+    -webkit-transform:scale(0.75,0.75);
+    -moz-transform:scale(0.75,0.75);
+    -o-transform:scale(0.75,0.75);
+    -ms-transform:scale(0.75,0.75);
+    
+    transform-origin:100% 0;
+    -webkit-transform-origin:100% 0;
+    -moz-transform-origin:100% 0;
+    -o-transform-origin:100% 0;
+    -ms-transform-origin:100% 0;
+    
+    filter:sepia(100%) invert(100%) hue-rotate(180deg)!important;
+    -webkit-filter:sepia(100%) invert(100%) hue-rotate(180deg)!important;
+    
+    z-index:999999!important;
+}
+
+.tmblr-iframe--follow-teaser, .follow-teaser, .iframe-controls--phone-mobile, .tmblr-iframe--app-cta-button {
+    display:none!important;
+    visibility:hidden!important;
+    height:0!important;
+}
+ 
+/*---------------TEXT HIGHLIGHT---------------*/
+::selection {
+background:#BBD3FD;
+}
+ 
+::-moz-selection {
+background:#BBD3FD;
+}
+ 
+/*---------------BASICS---------------*/
+body {
+    background-attachment:fixed;
+    line-height:1.6em;
+    font-size:12px;
+    text-align:left;
+    overflow:hidden;
+}
+
+a, a > span {
+    text-decoration:none;
+    -webkit-transition: all 0.153s ease-in-out;
+    -moz-transition: all 0.153s ease-in-out;
+    -o-transition: all 0.153s ease-in-out;
+}
+
+pre, code {
+    white-space:pre-wrap;
+}
+
+img {vertical-align:middle;}
+
+/*------------ CUSTOMIZATION OPTIONS ------------*/
+/*-- 🍅🍅🍅🍅🍅🍅🍅 --*/
+
+/* all colors, dimensions etc are changed inside  :root  */
+/* EXCEPT the background color, changed below: */
+
+body {
+    background-color:#CDC8B0;
+}
+
+:root {
+    --Background:#CDC8B0;
+    
+    --Background-Circle-Size:43vw;
+    --Background-Circle-Spacing:1vh;
+    
+    --Background-Lines-Length:60vw;
+    --Background-Lines-Spacing:6vh;
+    
+    --Background-Shapes-Color:#bbb7a4;
+    
+    --Background-Shadow-Size:30vw;
+    --Background-Shadow-Color:#3b3933;
+    --Background-Shadow-Opacity:0.3;
+    --Screen-Padding:32px;
+    
+    --LeftBorder-Left-Width:10px;
+    --LeftBorder-Right-Width:3px;
+    --LeftBorder-Color:#B4AF9A;
+    --LeftBorder-Right-Gap:26px;
+    
+    /*------- TOP LINKS / CUSTOM LINKS -------*/
+    --TopLinks-Width:136px; /* 140 */
+    --TopLinks-Padding:8px;
+    --TopLinks-Background:#B4AF9A;
+    --TopLinks-Accent-Color:#49463E;
+    --TopLinks-Border-Size:2px;
+    
+    --TopLinks-Icon-Size:12px;
+    --TopLinks-Icon-Padding:5px;
+    --TopLinks-Icon-Right-Gap:7px;
+    
+    --TopLinks-Font-Size:13px;
+    
+    --TopLinks-Spacing:15px;
+    
+    /*------- MAIN TITLE -------*/
+    --Main-Title-Font-Size:26px;
+    --Main-Title-Color:#49463E;
+    --Main-Title-Shadow-Color:#B4AF9A;
+    
+    --Hyphen-Width:12px;
+    --Hyphen-Color:#49463E;
+    --Hyphen-Spacing:10px;
+    
+    --Smaller-Title-Font-Size:14px;
+    --Smaller-Title-Color:#49463E;
+    
+    /*------- CHARACTER LIST (LEFT BOX) -------*/
+    --CharacterList-Box-Width:350px;
+    --CharacterList-Box-Background:#DAD4BB;
+    --CharacterList-Box-Shadow-Color:#bfbba9;
+    --CharacterList-Box-Border-Size:2px;
+    --CharacterList-Box-Border-Color:#bfbba9;
+    --CharacterList-Scrollbar-Color:#B4AF9A;
+    
+    --CharacterName-Padding:10px;
+    --CharacterName-Accent-Color:#49463E;
+    --CharacterName-Border-Size:2px;
+    
+    --CharacterName-Box-Size:8px;
+    --CharacterName-Box-Border-Size:1px;
+    --CharacterName-Box-Right-Gap:10px;
+    
+    --CharacterName-Font-Size:15px;
+    --CharacterList-Row-Spacing:2px;
+    
+    /*------- CHARACTER INFO BOX (RIGHT BOX) -------*/
+    --InfoBox-Left-Gap:36px;
+    
+    --InfoBox-Title-Padding:12px;
+    --InfoBox-Title-Background:#b4af9a;
+    --InfoBox-Title-Square-Right-Gap:9px;
+    --InfoBox-Title-Font-Size:17px;
+    --InfoBox-Title-Color:#49463E;
+    
+    --InfoBox-Background:#DAD4BB;
+    --InfoBox-Border-Size:2px;
+    --InfoBox-Border-Color:#bfbba9;
+    --InfoBox-Shadow-Color:#bfbba9;
+    
+    --InfoBox-Image-Container-Width:245px;
+    --InfoBox-Image-Vignette-Size:69px;
+    --InfoBox-Image-Vignette-Color:#201e1b; /* only for non-fullsized images */
+    --InfoBox-Text-Left-Gap:20px;
+    --InfoBox-Bullet-Icon-Size:22px;
+    --InfoBox-Bullet-Icon-Color:#49463E;
+    --InfoBox-Bullet-Text-Spacing:14px;
+    --InfoBox-Bullet-Row-Spacing:2.5px; /* does not support negative values */
+    
+    --InfoBox-Text-Font-Size:14px;
+    --InfoBox-Text-Color:#656055;
+    
+    --Special-Text-Background:#C1BCA5;
+    --Special-Text:#49463E;
+    
+    --InfoBox-Text-Links:#201e1b; /* if any */
+    
+    --InfoBox-Scrollbar-Color:#B4AF9A;
+    
+    --Switch-Fade-Speed:169ms; /* number in milliseconds ONLY */
+    
+    /*------- DECOR LINES (TOP & BOTTOM) -------*/
+    --Decor-Lines-Thickness:2px;
+    --Decor-Lines-Color:#747268;
+    
+    --Decor-Lines-Stub-Width:0.67vw;
+    --Decor-Lines-Stub-Height:2px;
+    
+    --Decor-Lines-Dots-Top-Gap:-3px;
+    --Decor-Lines-Dots-Size:2.5vw;
+    --Decor-Lines-Dots-Color:#656156;
+    --Decor-Lines-Dots-Spacing:0.9vw;
+}
+
+/*--------- BACKGROUND SHAPES ---------*/
+/*----top left----*/
+.shrimp {
+    position:absolute;
+    top:0;margin-top:calc(var(--Background-Circle-Size) * -.5);
+    left:0;margin-left:calc(var(--Background-Circle-Size) * -.5);
+    width:var(--Background-Circle-Size);
+    height:var(--Background-Circle-Size);
+    border-radius:100%;
+    border:2px solid var(--Background-Shapes-Color);
+    z-index:-69;
+}
+
+.scampi {
+    position:absolute;
+    top:0;margin-top:calc((var(--Background-Circle-Size) * -.5) + 2px);
+    left:0;margin-left:calc((var(--Background-Circle-Size) * -.5) + 2px);
+    width:calc(var(--Background-Circle-Size) + var(--Background-Circle-Spacing));
+    height:calc(var(--Background-Circle-Size) + var(--Background-Circle-Spacing));
+    border-radius:100%;
+    border:2px solid var(--Background-Shapes-Color);
+}
+
+.clam {
+    position:absolute;
+    top:0;
+    left:0;
+    width:var(--Background-Lines-Length);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:left;
+    z-index:-69;
+}
+
+.prawn {
+    position:absolute;
+    top:0;
+    left:0;margin-left:var(--Background-Lines-Spacing);
+    width:calc(var(--Background-Lines-Length) * 0.87);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:left;
+}
+
+.haddock {
+    position:absolute;
+    top:0;
+    left:0;margin-left:calc(var(--Background-Lines-Spacing) * -1);
+    width:calc(var(--Background-Lines-Length) * 0.8);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:left;
+}
+
+/*----bottom right----*/
+.carp {
+    position:absolute;
+    bottom:0;margin-bottom:calc(var(--Background-Circle-Size) * -.5);
+    right:0;margin-right:calc(var(--Background-Circle-Size) * -.5);
+    width:var(--Background-Circle-Size);
+    height:var(--Background-Circle-Size);
+    border-radius:100%;
+    border:2px solid var(--Background-Shapes-Color);
+    z-index:-69;
+}
+
+.crayfish {
+    position:absolute;
+    bottom:0;margin-bottom:calc((var(--Background-Circle-Size) * -.5) + 2px);
+    right:0;margin-right:calc((var(--Background-Circle-Size) * -.5) + 2px);
+    width:calc(var(--Background-Circle-Size) + var(--Background-Circle-Spacing));
+    height:calc(var(--Background-Circle-Size) + var(--Background-Circle-Spacing));
+    border-radius:100%;
+    border:2px solid var(--Background-Shapes-Color);
+}
+
+.perch {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:var(--Background-Lines-Length);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:right;
+    z-index:-69;
+}
+
+.lamprey {
+    position:absolute;
+    bottom:0;
+    right:0;margin-right:var(--Background-Lines-Spacing);
+    width:calc(var(--Background-Lines-Length) * 0.87);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:right;
+}
+
+.unagi {
+    position:absolute;
+    bottom:0;
+    right:0;margin-right:calc(var(--Background-Lines-Spacing) * -1);
+    width:calc(var(--Background-Lines-Length) * 0.8);
+    height:2px;
+    background:var(--Background-Shapes-Color);
+    transform:rotate(45deg);
+    transform-origin:right;
+}
+
+/*---------- BACKGROUND SHADOW ----------*/
+#ohnines, #pod069 {
+    position:fixed;
+    top:0;
+    width:var(--Background-Shadow-Size);
+    height:100vh;
+    pointer-events:none;
+    opacity:var(--Background-Shadow-Opacity);
+    mix-blend-mode:multiply;
+    z-index:102;
+}
+
+#ohnines {
+    left:0;
+    background:linear-gradient(to right, var(--Background-Shadow-Color), transparent 75%);
+}
+
+#pod069 {
+    right:0;
+    background:linear-gradient(to left, var(--Background-Shadow-Color), transparent 75%);
+}
+
+/*--------- TOP LINE ---------*/
+.decoline-top {
+    position:fixed;
+    left:0;
+    top:0;margin-top:var(--Screen-Padding);
+    width:100%;
+    font-family:times;
+    line-height:1em;
+}
+
+.decoline-bot {
+    position:fixed;
+    left:0;
+    bottom:0;
+    margin-bottom:var(--Screen-Padding);
+    width:100%;
+    font-family:times;
+    line-height:1em;
+}
+
+.une-biere {
+    width:100%;
+    height:var(--Decor-Lines-Thickness);
+    background:var(--Decor-Lines-Color);
+}
+
+.mackerel {
+    margin:0 auto;
+    text-align:center;
+}
+
+.sauce {
+    display:inline-block;
+}
+
+.bestfish {
+    display:flex;
+    margin-left:var(--Decor-Lines-Stub-Width);
+}
+
+.bestfish span {
+    margin-top:var(--Decor-Lines-Dots-Top-Gap);
+    margin-left:var(--Decor-Lines-Dots-Spacing);
+    margin-right:calc(var(--Decor-Lines-Dots-Spacing) + var(--Decor-Lines-Stub-Width));
+    font-size:var(--Decor-Lines-Dots-Size);
+    font-weight:bold;
+    color:var(--Decor-Lines-Dots-Color);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    line-height:0.8em;
+}
+
+.bestfish span:first-child:before {
+    content:"";
+    position:absolute;
+    margin-left:calc((var(--Decor-Lines-Stub-Width) * -1) - var(--Decor-Lines-Dots-Spacing));
+    margin-top:calc(var(--Decor-Lines-Dots-Top-Gap) * -1);
+    width:var(--Decor-Lines-Stub-Width);
+    height:var(--Decor-Lines-Stub-Height);
+    background:var(--Decor-Lines-Color);
+}
+
+.bestfish span:after {
+    content:"";
+    position:absolute;
+    margin-left:var(--Decor-Lines-Dots-Spacing);
+    margin-top:calc(var(--Decor-Lines-Dots-Top-Gap) * -1);
+    width:var(--Decor-Lines-Stub-Width);
+    height:var(--Decor-Lines-Stub-Height);
+    background:var(--Decor-Lines-Color);
+}
+
+/*--------- TOP BAR ---------*/
+.halibut {
+    display:table;
+    margin-bottom:calc(var(--Screen-Padding) * 0.69);
+    margin-left:var(--Screen-Padding);
+}
+
+/*--------- LEFT BORDER ---------*/
+.tilapia {
+    display:table-cell;
+    width:calc(var(--LeftBorder-Left-Width) - var(--LeftBorder-Right-Width));
+    border-left:var(--LeftBorder-Left-Width) solid var(--LeftBorder-Color);
+    border-right:var(--LeftBorder-Right-Width) solid var(--LeftBorder-Color);
+}
+
+/*---------TOP LINKS ---------*/
+.toplinks {
+    margin-left:calc(var(--LeftBorder-Right-Gap) - 7px);
+    width:calc(100vw - (var(--LeftBorder-Left-Width) * 2) - (var(--Screen-Padding) * 2));
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.toplinks a {
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin-left:var(--TopLinks-Spacing);
+    width:var(--TopLinks-Width);
+    padding:calc(var(--TopLinks-Padding) - var(--TopLinks-Border-Size)) var(--TopLinks-Padding);
+    background:var(--TopLinks-Background);
+    box-sizing:border-box;
+    z-index:1;
+}
+
+.toplinks a:first-of-type {margin-left:0;}
+
+.toplinks .curse {
+    position:absolute;
+    left:0;
+    margin-left:calc((var(--TopLinks-Icon-Size) + (var(--TopLinks-Icon-Padding) * 3) + var(--TopLinks-Border-Size)) * -1);
+    width:calc(var(--TopLinks-Icon-Size) + (var(--TopLinks-Icon-Padding) * 2) + var(--TopLinks-Border-Size));
+    height:calc(var(--TopLinks-Icon-Size) + (var(--TopLinks-Icon-Padding) * 2) + var(--TopLinks-Border-Size));
+    opacity:0;
+    -webkit-transition: all 0.069s ease-in;
+    -moz-transition: all 0.069s ease-in;
+    -o-transition: all 0.069s ease-in;
+}
+
+.curse svg {
+    width:100%;
+    height:100%;
+}
+
+.toplinks .curse svg [fill]{
+    fill:var(--TopLinks-Accent-Color)
+}
+
+.charalist svg [fill]{
+    fill:var(--CharacterName-Accent-Color);
+}
+
+.bio-text svg [fill]{
+    fill:var(--InfoBox-Text-Color);
+}
+
+.toplinks a:hover .curse {
+    opacity:1;
+}
+
+/*---- toplinks border hover ----*/
+.toplinks a:before {
+    content:"";
+    position:absolute;
+    left:0;
+    width:75%;
+    height:100%;
+    padding:var(--TopLinks-Border-Size) 0;
+    border-top:var(--TopLinks-Border-Size) solid var(--TopLinks-Accent-Color);
+    border-bottom:var(--TopLinks-Border-Size) solid var(--TopLinks-Accent-Color);
+    opacity:0;
+    -webkit-transition: all 0.069s ease-in;
+    -moz-transition: all 0.069s ease-in;
+    -o-transition: all 0.069s ease-in;
+}
+
+.toplinks a:hover:before {
+    width:100%;
+    opacity:1;
+}
+
+/*---- toplinks background hover ----*/
+.toplinks a:after {
+    content:"";
+    position:absolute;
+    left:0;
+    width:50%;
+    height:100%;
+    -webkit-transition: width 0.153s ease-in;
+    -moz-transition: width 0.153s ease-in;
+    -o-transition: width 0.153s ease-in;
+    z-index:-1;
+}
+
+.toplinks a:hover:after {
+    width:100%;
+    background:var(--TopLinks-Accent-Color);
+}
+
+.toplinks .th {
+    margin-right:var(--TopLinks-Icon-Right-Gap);
+    padding:var(--TopLinks-Icon-Padding);
+    background:var(--TopLinks-Accent-Color);
+    font-size:var(--TopLinks-Icon-Size);
+    color:var(--TopLinks-Background);
+}
+
+.toplinks a:hover .th {
+    background:var(--TopLinks-Background);
+    color:var(--TopLinks-Accent-Color);
+}
+
+.toplinks span {
+    margin-top:-2.5px;
+    font-family:darker grotesque;
+    font-weight:500;
+    font-size:var(--TopLinks-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--TopLinks-Accent-Color);
+}
+
+.toplinks a:hover span {
+    color:var(--TopLinks-Background);
+}
+
+/*--------- MAIN STUFF ---------*/
+#le-main {
+    position:absolute;
+    top:0;
+    margin-top:calc((var(--Screen-Padding) * (1 + 0.42)) + ((var(--TopLinks-Padding) - var(--TopLinks-Border-Size)) * 2) + var(--TopLinks-Icon-Size) + (var(--TopLinks-Icon-Padding) * 2) + var(--Decor-Lines-Thickness) + var(--Decor-Lines-Stub-Height) + var(--Decor-Lines-Dots-Top-Gap) + var(--Decor-Lines-Dots-Size) + (var(--Screen-Padding) * 0.42)); /* im so sorry for this monstrosity */
+    left:0;
+    margin-left:var(--Screen-Padding);
+    width:calc(100vw - (var(--Screen-Padding) * 2));
+    height:calc(100vh - ((var(--Screen-Padding) * (1 + 0.42)) + ((var(--TopLinks-Padding) - var(--TopLinks-Border-Size)) * 2) + var(--TopLinks-Icon-Size) + (var(--TopLinks-Icon-Padding) * 2) + var(--Decor-Lines-Thickness) + var(--Decor-Lines-Stub-Height) + var(--Decor-Lines-Dots-Top-Gap) + var(--Decor-Lines-Dots-Size) + (var(--Screen-Padding) * 0.42)) - var(--Decor-Lines-Thickness) - var(--Decor-Lines-Stub-Height) - var(--Decor-Lines-Dots-Top-Gap) - var(--Decor-Lines-Dots-Size) - (var(--Screen-Padding) * 1.42)); /* i am once again sorry for this monstrosity */
+    display:table;
+}
+
+/*--------- MAIN TITLE ---------*/
+.main-title {
+    margin-top:10px;
+    margin-left:2px;
+    margin-bottom:calc(var(--Screen-Padding) * 0.69);
+    display:flex;
+    align-items:center;
+    color:var(--Main-Title-Color);
+}
+
+.large {
+    margin-top:-4px;
+    font-family:darker grotesque;
+    font-weight:400;
+    font-size:var(--Main-Title-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:4px 4px 0px var(--Main-Title-Shadow-Color);
+}
+
+.hyphen {
+    margin-left:calc(var(--Hyphen-Spacing) + 2px);
+    margin-right:var(--Hyphen-Spacing);
+    width:var(--Hyphen-Width);
+    height:1px;
+    background:var(--Hyphen-Color);
+}
+
+.smaller {
+    margin-top:1px;
+    font-family:Inter;
+    font-weight:300;
+    font-size:var(--Smaller-Title-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--Smaller-Title-Color);
+}
+
+/*--------- MAIN (LOWER) CONTAINER ---------*/
+.houh {
+    width:100%;
+    height:100%;
+    display:table-row;
+}
+
+.uhhh {
+    width:100%;
+    height:100%;
+    display:flex;
+}
+
+.bigleftbar {
+    width:calc(var(--LeftBorder-Left-Width) - var(--LeftBorder-Right-Width));
+    height:100%;
+    border-left:var(--LeftBorder-Left-Width) solid var(--LeftBorder-Color);
+    border-right:var(--LeftBorder-Right-Width) solid var(--LeftBorder-Color);
+}
+
+/*--------- LEFT BOX / CHARACTER LIST ---------*/
+.leftbox {
+    position:relative;
+    margin-left:var(--LeftBorder-Right-Gap);
+    width:var(--CharacterList-Box-Width);
+    height:100%;
+    background:var(--CharacterList-Box-Background);
+    box-shadow:3px 3px 0px var(--CharacterList-Box-Shadow-Color);
+}
+
+.imatsoup {
+    display:flex;
+    align-items:center;
+    margin-top:calc(var(--CharacterList-Box-Border-Size) * 6);
+    margin-left:calc(var(--CharacterList-Box-Border-Size) * 6);
+    margin-bottom:calc(var(--CharacterList-Box-Border-Size) * 6);
+    width:calc(100% - (var(--CharacterList-Box-Border-Size) * 12));
+}
+
+.wait-its-all-soup {
+    width:100%;
+    height:var(--CharacterList-Box-Border-Size);
+    background:var(--CharacterList-Box-Border-Color);
+}
+
+.always-has-been {
+    margin-left:calc(var(--CharacterList-Box-Border-Size) * 4);
+    width:calc(var(--CharacterList-Box-Border-Size) * 2);
+    height:calc(var(--CharacterList-Box-Border-Size) * 2);
+    background:var(--CharacterList-Box-Border-Color);
+    border-radius:100%;
+}
+
+.tomatoe {
+    position:absolute;
+    display:flex;
+    align-items:center;
+    bottom:0;
+    margin-bottom:calc(var(--CharacterList-Box-Border-Size) * 6);
+    margin-left:calc(var(--CharacterList-Box-Border-Size) * 6);
+    width:calc(100% - (var(--CharacterList-Box-Border-Size) * 12));
+}
+
+.anchovy {
+    position:absolute;
+    margin-left:calc((var(--CharacterList-Box-Border-Size) * 6) - 100px);
+    width:calc(100% - (var(--CharacterList-Box-Border-Size) * 6.5) + 100px);
+    height:calc(100% - (var(--CharacterList-Box-Border-Size) * 28));
+    overflow-y:auto;
+}
+
+.anchovy::-webkit-scrollbar {
+    width:calc(((var(--CharacterList-Box-Border-Size) * 6) * 2) + 2px);
+    height:calc(((var(--CharacterList-Box-Border-Size) * 6) * 2) + 2px);
+    background-color:var(--CharacterList-Box-Background);
+}
+ 
+.anchovy::-webkit-scrollbar-thumb {
+    border-left:calc(var(--CharacterList-Box-Border-Size) * 6) solid var(--CharacterList-Box-Background);
+    border-right:calc(var(--CharacterList-Box-Border-Size) * 6) solid var(--CharacterList-Box-Background);
+    background-color:var(--CharacterList-Scrollbar-Color);
+}
+
+/*--------- CHARACTER LISTING ---------*/
+.arowana {
+    margin-left:100px;
+    padding-top:calc(var(--CharacterName-Border-Size) * 4);
+}
+
+.charalist {
+    margin-left:calc(var(--CharacterList-Box-Border-Size) * -6);
+    margin-top:calc(var(--CharacterName-Border-Size) * -2);
+}
+
+.charalist a {
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin-top:var(--CharacterList-Row-Spacing);
+    padding:calc(var(--CharacterName-Padding) - var(--CharacterName-Border-Size)) var(--CharacterName-Padding);
+    box-sizing:border-box;
+    cursor:pointer;
+    z-index:1;
+}
+
+.charalist a:first-of-type {margin-top:0;}
+
+/*-------*/
+.active .curse {
+    opacity:1!important;
+}
+
+.active:before {
+    width:100%!important;
+    opacity:1!important;
+}
+
+.active:after {
+    width:100%!important;
+    background:var(--CharacterName-Accent-Color)!important;
+}
+
+.active .box {
+    background:var(--CharacterList-Box-Background)!important;
+    border-color:var(--CharacterList-Box-Background)!important;
+}
+
+.active span {
+    color:var(--CharacterList-Box-Background)!important;
+}
+/*------*/
+
+.charalist .curse {
+    position:absolute;
+    left:0;
+    margin-left:calc((var(--CharacterName-Box-Size) + (var(--CharacterName-Padding) * (1 + 1.75))) * -1);
+    width:calc(var(--CharacterName-Box-Size) + (var(--CharacterName-Padding) * 1.75));
+    height:calc(var(--CharacterName-Box-Size) + (var(--CharacterName-Padding) * 1.75));
+    opacity:0;
+    -webkit-transition: all 0.069s ease-in;
+    -moz-transition: all 0.069s ease-in;
+    -o-transition: all 0.069s ease-in;
+}
+
+.curse svg {
+    width:100%;
+    height:100%;
+}
+
+.charalist a:hover .curse {
+    opacity:1;
+}
+
+/*---- chara names border hover ----*/
+.charalist a:before {
+    content:"";
+    position:absolute;
+    left:0;
+    width:75%;
+    height:100%;
+    padding:var(--CharacterName-Border-Size) 0;
+    border-top:var(--CharacterName-Border-Size) solid var(--CharacterName-Accent-Color);
+    border-bottom:var(--CharacterName-Border-Size) solid var(--CharacterName-Accent-Color);
+    opacity:0;
+    -webkit-transition: all 0.069s ease-in;
+    -moz-transition: all 0.069s ease-in;
+    -o-transition: all 0.069s ease-in;
+}
+
+.charalist a:hover:before {
+    width:100%;
+    opacity:1;
+}
+
+/*---- chara names background hover ----*/
+.charalist a:after {
+    content:"";
+    position:absolute;
+    left:0;
+    width:50%;
+    height:100%;
+    -webkit-transition: width 0.153s ease-in;
+    -moz-transition: width 0.153s ease-in;
+    -o-transition: width 0.153s ease-in;
+    z-index:-1;
+}
+
+.charalist a:hover:after {
+    width:100%;
+    background:var(--CharacterName-Accent-Color);
+}
+
+.charalist .box {
+    margin-left:calc(var(--CharacterName-Border-Size) * 2.5);
+    margin-right:var(--CharacterName-Box-Right-Gap);
+    width:var(--CharacterName-Box-Size);
+    height:var(--CharacterName-Box-Size);
+    border:var(--CharacterName-Box-Border-Size) solid var(--CharacterName-Accent-Color);
+}
+
+.charalist a:hover .box {
+    background:var(--CharacterList-Box-Background);
+    border-color:var(--CharacterList-Box-Background);
+}
+
+.charalist span {
+    margin-top:-2.5px;
+    font-family:darker grotesque;
+    font-weight:500;
+    font-size:var(--CharacterName-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--CharacterName-Accent-Color);
+}
+
+.charalist a:hover span {
+    color:var(--CharacterList-Box-Background);
+}
+
+/*-------*/
+.highlight .curse {
+    opacity:1!important;
+}
+
+.highlight:before {
+    width:100%!important;
+    opacity:1!important;
+}
+
+.highlight:after {
+    width:100%!important;
+    background:var(--TopLinks-Accent-Color)!important;
+}
+
+.highlight .th {
+    background:var(--TopLinks-Background)!important;
+    color:var(--TopLinks-Accent-Color)!important;
+}
+
+.highlight span {
+    color:var(--TopLinks-Background)!important;
+}
+/*------*/
+
+/*--------- RIGHT INFO BOX ---------*/
+.info-box {
+    margin-left:var(--InfoBox-Left-Gap);
+    flex:1;
+    -ms-flex:1;
+    box-shadow:3px 3px 0px var(--InfoBox-Shadow-Color);
+}
+
+.koi {
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+.box-title {
+    display:flex;
+    align-items:center;
+    padding:var(--InfoBox-Title-Padding);
+    background:var(--InfoBox-Title-Background);
+}
+
+.boxkun {
+    margin-right:var(--InfoBox-Title-Square-Right-Gap);
+    width:var(--InfoBox-Title-Font-Size);
+    height:var(--InfoBox-Title-Font-Size);
+    background:var(--InfoBox-Title-Color);
+}
+
+.title-text {
+    margin-top:-1px;
+    white-space:nowrap;
+}
+
+.title-text span {
+    font-family:darker grotesque;
+    font-weight:500;
+    font-size:var(--InfoBox-Title-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:1.3px;
+    color:var(--InfoBox-Title-Color);
+    line-height:1em;
+    display:none;
+}
+
+.title-text span:first-child {display:block;}
+
+.baskingshark {
+    display:table-row;
+    height:100%;
+}
+
+.oilsardine {
+    position:relative;
+    width:100%;
+    height:100%;
+    background:var(--InfoBox-Background);
+    display:table;
+}
+
+.theres-only-soup {
+    display:flex;
+    align-items:center;
+    padding-top:calc(var(--InfoBox-Border-Size) * 6);
+    margin-left:calc(var(--InfoBox-Border-Size) * 6);
+    margin-bottom:calc(var(--InfoBox-Border-Size) * 6);
+    width:calc(100% - (var(--InfoBox-Border-Size) * 12));
+}
+
+.why-are-you-buying-clothes {
+    width:100%;
+    height:var(--InfoBox-Border-Size);
+    background:var(--InfoBox-Border-Color);
+}
+
+.at-the-soup-store {
+    margin-left:calc(var(--InfoBox-Border-Size) * 4);
+    width:calc(var(--InfoBox-Border-Size) * 2);
+    height:calc(var(--InfoBox-Border-Size) * 2);
+    background:var(--InfoBox-Border-Color);
+    border-radius:100%;
+}
+
+.theres-more-soup {
+    display:flex;
+    align-items:center;
+    position:absolute;
+    bottom:0;margin-bottom:calc(var(--InfoBox-Border-Size) * 6);
+    margin-left:calc(var(--InfoBox-Border-Size) * 6);
+    width:calc(100% - (var(--InfoBox-Border-Size) * 12));
+}
+
+/*--------- INFO BOX IMAGE ---------*/
+.arctic-char {
+    position:relative;
+    display:table-row;
+    width:100%;
+    height:100%;
+}
+
+.flounder {
+    position:absolute;
+    display:flex;
+    margin-left:calc(var(--InfoBox-Border-Size) * 6);
+    width:calc(100% - (var(--InfoBox-Border-Size) * 12));
+    height:calc(100% - (var(--InfoBox-Border-Size) * 14)); /* was 28 */
+}
+
+.image-container {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:calc(var(--InfoBox-Border-Size) * 3);
+    width:var(--InfoBox-Image-Container-Width);
+    height:100%;
+    background-image:url(https://rhizo.gitlab.io/nier0/subtlepatterns_prism.png);
+    background-repeat:repeat;
+    background-position:center;
+    overflow:hidden;
+}
+
+.img-vignette {
+    box-shadow:0 0 var(--InfoBox-Image-Vignette-Size) var(--InfoBox-Image-Vignette-Color) inset;
+}
+
+.character-image {
+    position:absolute;
+    max-height:100%;
+    display:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.info-text {
+    margin-left:var(--InfoBox-Text-Left-Gap);
+    margin-right:calc(var(--InfoBox-Border-Size) * -5.5);
+    font-family:Rubik;
+    font-size:var(--InfoBox-Text-Font-Size);
+    letter-spacing:0.3px;
+    width:calc(100% - var(--InfoBox-Image-Container-Width));
+    height:100%;
+    color:var(--InfoBox-Text-Color);
+    line-height:1.73em;
+    text-align:justify;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding-right:calc(var(--InfoBox-Border-Size) * 3);
+    opacity:0;
+}
+
+.opacity {
+    opacity:1!important;
+}
+
+.info-text, .opacity {
+    transition:opacity var(--Switch-Fade-Speed) ease-in-out;
+}
+
+.info-text::-webkit-scrollbar {
+    width:calc(((var(--InfoBox-Border-Size) * 6) * 2) + 2px);
+    height:calc(((var(--InfoBox-Border-Size) * 6) * 2) + 2px);
+    background-color:var(--InfoBox-Background);
+}
+ 
+.info-text::-webkit-scrollbar-thumb {
+    border-left:calc(var(--InfoBox-Border-Size) * 6) solid var(--InfoBox-Background);
+    border-right:calc(var(--InfoBox-Border-Size) * 6) solid var(--InfoBox-Background);
+    background-color:var(--InfoBox-Scrollbar-Color);
+}
+
+.bio-text {
+    display:none;
+    padding-top:3px;
+}
+
+.bio-text:first-of-type {display:block;}
+
+.bio-text table {
+    border-spacing:0 var(--InfoBox-Bullet-Row-Spacing);
+    margin:calc(var(--InfoBox-Bullet-Row-Spacing) * -1) 0;
+    line-height:1.69em;
+}
+
+.bio-text .curse {
+    margin-top:calc(((((var(--InfoBox-Text-Font-Size) - 2.5px) * 1.69) + 2px) - var(--InfoBox-Bullet-Icon-Size)) / 2);
+    margin-right:calc(var(--Info-Bullet-Text-Spacing) * -0.25);
+    width:var(--InfoBox-Bullet-Icon-Size);
+    height:var(--InfoBox-Bullet-Icon-Size);
+}
+
+.bio-text td {
+    padding-right:var(--InfoBox-Bullet-Text-Spacing);
+    vertical-align:top;
+}
+
+.bio-text td[label] {
+    padding-top:2px;
+    font-family:inter;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:calc(var(--InfoBox-Text-Font-Size) - 2.5px);
+}
+
+.bio-text td:last-of-type {padding-right:0;}
+
+.bio-text special {
+    display:inline-block;
+    margin:0 2px;
+    padding:1.5px 7px;
+    background:var(--Special-Text-Background);
+    font-family:inter;
+    font-weight:400;
+    font-size:calc(var(--InfoBox-Text-Font-Size) - 1.5px);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--Special-Text);
+}
+
+.bio-text blockquote {
+    margin:0;
+    padding-left:calc(var(--InfoBox-Border-Size) * 8);
+    border-left:var(--InfoBox-Border-Size) solid var(--InfoBox-Border-Color);
+}
+
+.bio-text a {
+    padding-bottom:1px;
+    border-bottom:1px solid var(--InfoBox-Border-Color);
+    color:var(--InfoBox-Text-Links);
+}
+
+.bio-text p:last-of-type {margin-bottom:0}
+
+/*----------------*/
+
+</style>
+
+</head>
+
+<body>
+<!-- if you don't want the background circles & lines, -->
+<!-- delete starting from here -->
+<div class="shrimp"></div>
+<div class="scampi"></div>
+<div class="clam"></div>
+<div class="prawn"></div>
+<div class="haddock"></div>
+
+<div class="carp"></div>
+<div class="crayfish"></div>
+<div class="perch"></div>
+<div class="lamprey"></div>
+<div class="unagi"></div>
+<!-- to here-->
+
+
+<div class="decoline-top">
+    <div class="halibut">
+        <div class="tilapia"></div>
+        
+        <div class="toplinks">
+        
+        <!--------- TOP LINKS / CUSTOM LINKS --------->
+        <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+        <!--
+             • grey notes indicated start and end of a link
+             • link URL goes between quote marks of  href=""
+             
+             • to change the icon, go to:   honeybee-list.glitch.me
+               select one that you like. copy the name
+               replace it with e.g.:  home-o
+               do not remove the hyphen (-) after the 2nd "th"
+               
+             • link display text goes between <span> and </span>
+             • please do not remove the credit! *\^o^)/°
+        -->
+        
+            <!------- start of a link ------->
+            <!-- 👇👇👇👇👇👇👇 -->
+            
+            <a href="https://mcyhueno.neocities.org/"> <!-- link url -->
+                <div class="curse"></div>
+                <i class="th th-home-o"></i> <!-- icon -->
+                <span>index</span> <!-- link text -->
+            </a>
+            <!------- end of a link ------->
+            <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+            <!--------------------->
+            
+            
+            
+            <!------- start of a link ------->
+            <!-- 👇👇👇👇👇👇👇 -->
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekc5u-0uK0FN6WgFeh8wlRxH6R5CezxebifC0r2YVqhNlihQ/viewform"> <!-- link url -->
+                <div class="curse"></div>
+                <i class="th th-envelope-o"></i> <!-- icon -->
+                <span>message</span> <!-- link text -->
+            </a>
+            <!------- end of a link ------->
+            <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+            <!--------------------->
+            
+            <!-- if you want to add links, pls put them before the credit! -->
+            
+            <a href="#" title="coded by ZixuS">
+                <div class="curse"></div>
+                <i class="th th-settings-o"></i>
+                <span>credit</span>
+            </a>
+        </div><!--toplinks-->
+    </div><!--halibut-->
+    
+    <div class="une-biere"></div>
+    <div class="mackerel">
+    <div class="sauce">
+        <div class="bestfish">
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span>
+        </div>
+    </div><!--sauce-->
+    </div><!--mackerel-->
+</div><!--decoline-top-->
+
+
+<div id="le-main">
+    <div class="main-title">
+    
+        <!------- MAIN TITLE (TOP LEFT) ------->
+        <!-- title does NOT change with character -->
+        <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+        
+        <div class="large"> Updates </div> <!-- larger text -->
+        <div class="hyphen"></div>
+        <div class="smaller">@chaehuenoski </div> <!-- smaller text after hyphen -->
+        
+    </div><!--do not delete this line-->
+    
+    
+    
+    <div class="houh">
+    <div class="uhhh">
+        <div class="bigleftbar"></div>
+        <div class="leftbox">
+            <div class="imatsoup">
+                <div class="wait-its-all-soup"></div>
+                <div class="always-has-been"></div>
+            </div>
+            
+            <div class="anchovy">
+            <div class="arowana">
+                <div class="charalist">
+                
+                    <!----- CHARACTER LIST (LEFT BOX) ----->
+                    <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+                    <!--
+                         Instructions:
+                         • each character needs their own ID
+                           this is set between the quotation marks of:
+                           
+                              character-id="THEIRNAME"
+                           
+                         • this ID can be named anything (it doesn't have
+                           to be numbers, but I just used numbers as an
+                           example here), but keep in mind that you will
+                           have to use it again later
+                           
+                         • multiple characters cannot share the same ID;
+                           the naming must be unique to each character.
+                           
+                         • the ID will help you keep track of which
+                           character you're editing, especially if you
+                           have a lot of text later
+                    -->
+                    
+                    
+                    <!---- start a character name ---->
+                    <!-- 👇👇👇👇👇👇👇 -->
+                    
+                    <a character-id="1"> <!-- character ID -->
+                        <div class="curse"></div>
+                        <div class="box"></div>
+                        <span> Update 1 </span> <!-- character name -->
+                    </a>
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+                    <!--------------------->
+                    <!---- end a character name ---->
+                    
+                    
+                    
+                    
+                    <!---- start a character name ---->
+                    <!-- 👇👇👇👇👇👇👇 -->
+                    
+                    <a character-id="2"> <!-- character ID -->
+                        <div class="curse"></div>
+                        <div class="box"></div>
+                        <span>Locked 🔒</span> <!-- character name -->
+                    </a>
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+                    <!--------------------->
+                    <!---- end a character name ---->
+                    
+                    
+                    
+                    
+                    <!---- start a character name ---->
+                    <!-- 👇👇👇👇👇👇👇 -->
+                    
+                    <a character-id="3"> <!-- character ID -->
+                        <div class="curse"></div>
+                        <div class="box"></div>
+                        <span>Locked 🔒</span> <!-- character name -->
+                    </a>
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+                    <!--------------------->
+                    <!---- end a character name ---->
+                    
+                    
+                    
+                    
+                    <!---- start a character name ---->
+                    <!-- 👇👇👇👇👇👇👇 -->
+                    
+                    <a character-id="4"> <!-- character ID -->
+                        <div class="curse"></div>
+                        <div class="box"></div>
+                        <span>Locked 🔒</span> <!-- character name -->
+                    </a>
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+                    <!--------------------->
+                    <!---- end a character name ---->
+                    
+                    
+                </div><!--end charalist--><!--do not delete this line-->
+            </div><!--do not delete this line-->
+            </div><!--do not delete this line-->
+            
+            
+            <div class="tomatoe">
+                <div class="wait-its-all-soup"></div>
+                <div class="always-has-been"></div>
+            </div>
+        </div><!--charalist-->
+        
+        
+        
+        
+        
+        <!-------- CHARACTER INFO BOX (RIGHT BOX) -------->
+        <div class="info-box">
+        <div class="koi">
+            <div class="box-title">
+                <div class="boxkun"></div>
+                
+                <div class="title-text">
+                
+                    <!------- CHARACTER NAME ------->
+                    <!-- (right box) -->
+                    <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+                    
+                    <!--
+                         • use the character-id="" that you assigned earlier
+                         • text just before   </span>   is the display text
+                    -->
+                    
+                    <span character-id="1"> Update #1 </span>
+                    <span character-id="2"> Locked 🔒 </span>
+                    <span character-id="3"> Locked 🔒 </span>
+                    <span character-id="4"> Locked 🔒 </span>
+                    
+                </div><!--title-text-->
+            </div><!--box-title-->
+            
+            
+            
+            <div class="baskingshark">
+            <div class="oilsardine">
+                <div class="theres-only-soup">
+                    <div class="why-are-you-buying-clothes"></div>
+                    <div class="at-the-soup-store"></div>
+                </div>
+                
+                
+                
+                <div class="arctic-char">
+                <div class="flounder">
+                    <div class="image-container">
+                    
+                    <!-------- CHARACTER IMAGES -------->
+                    <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+                    <!--
+                        ⭐ LEGEND: -------------------------------------------
+                        
+                        • character-id="..."    <-- ID assigned from earlier
+                        
+                        • class="character-image"   <-- don't touch this line
+                        
+                        • src="..."           <-- image URL
+                        
+                        • type="full_sized"   <-- if your image is a full-sized
+                                                  image, and you want it to fill
+                                                  up the container.
+                                                  
+                                                  remove if your image is a
+                                                  transparent render
+                                                  
+                        ⭐ POSITIONING --------------------------------------
+                        
+                        • top         <-- image aligns to the top
+                        • top="10px"  <-- image shifts from the top by 10px
+                                          (10px is just an example)
+                                           
+                        • bottom          <-- image aligns to the bottom
+                        • bottom="10px"   <-- image shift from bottom by 10px
+                                              (10px is just an example)
+                        
+                        • same goes for left & right
+                        
+                                        --------------------------------------
+                        
+                        • width="70%"  <-- image is 70% of container width
+                                           (70% is just an example)
+                                           
+                                           usually if you put a height, the
+                                           width doesn't need to be specified
+                                           
+                        • height="70%"  <-- image is 70% of container height
+                                           (70% is just an example)
+                                           
+                                           usually if you put a width, the
+                                           height doesn't need to be specified
+                                           
+                                        --------------------------------------
+                                        
+                        • you can also do a combination of positions, like:
+                          
+                          top left
+                          bottom right
+                          
+                          just make sure they're separated with a space.
+                          
+                        ⭐ KEEP IN MIND -------------------------------------
+                        
+                        • all images are automatically centered
+                        
+                        • adding positions isn't necessary but you can add
+                          these adjustments if you like
+                          
+                        • be careful not to leave any quotation marks open
+                        • don't remove the pointy bracket at the end:  >
+                        
+                        
+                    -->
+                        <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+                        
+                        
+                        
+                        
+                        <!---- start a character image ---->
+                        <!-- 👇👇👇👇👇👇👇 -->
+                        
+                        <img character-id="1"
+                             class="character-image" src="483382628_1665157910749973_840674449474702653_n.jpg" type="full_sized" top>
+                             
+                        <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️  -->
+                        <!----------------------->
+                        <!---- end a character image ---->
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!---- start a character image ---->
+                        <!-- 👇👇👇👇👇👇👇 -->
+                        
+                        <img character-id="2"
+                             class="character-image" src="https://rhizo.gitlab.io/nier0/9S.jpeg" type="full_sized" right> 
+                             
+                        <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️  -->
+                        <!----------------------->
+                        <!---- end a character image ---->
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!---- start a character image ---->
+                        <!-- 👇👇👇👇👇👇👇 -->
+                        
+                        <img character-id="3"
+                             class="character-image" src="https://rhizo.gitlab.io/nier0/A2.jpeg" type="full_sized" left="69px">
+                             
+                        <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️  -->
+                        <!----------------------->
+                        <!---- end a character image ---->
+                        
+                        
+                        
+                        
+                        
+                        <!---- start a character image ---->
+                        <!-- 👇👇👇👇👇👇👇 -->
+                        
+                        
+                        <img character-id="4"
+                             class="character-image" src="https://rhizo.gitlab.io/nier0/mackerel.png" height="36%">
+                             
+                        <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️  -->
+                        <!----------------------->
+                        <!---- end a character image ---->
+                        
+                        
+                    </div><!--image-container-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="info-text">
+                    <!------- CHARACTER BIOGRAPHY TEXT ------->
+                    <!-- 🍅🍅🍅🍅🍅🍅🍅 -->
+                    <!--
+                        • for character-id="", insert what you had assigned
+                          previously for the same character
+                          
+                        • I've included the structure of 3 bullet point rows,
+                          followed by long main text, but you don't have to
+                          do this for every character
+                          
+                        • feel free to add/delete rows as fit
+                        
+                        • remember to change the character-id at the start
+                          if you add more charaters!
+                        
+                        ---------------------------------------
+                        
+                        • <p>   is a paragraph break
+                        • <br>  is a line break
+                    -->
+                    
+                    
+                    <!------ START A CHARACTER'S INFO ------>
+                    <!-- 👇👇👇👇👇👇👇 -->
+                    
+                    <div character-id="1" class="bio-text">
+                        <!---- start bullet points ---->
+                        <table>
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> Hey CARL, <br>
+                                    
+                                <td> Reading your response meant more to me than I can put into words. I was never sure if you’d find this space, let alone take the time to write back. But you did—and knowing that my words gave you even a little bit of comfort makes everything worth it. <br>
+<br>
+I never wanted to make you feel uneasy, and I’m sorry if I did. I can only imagine how it must feel to receive something so out of the blue. But please know this—nothing I’ve written comes from a place of expectation. I don’t need you to respond or to figure out who I am right away. I just wanted to create something for you, something that exists without pressure, a quiet place where my thoughts about you could live.<br>
+                                    
+<br>
+As for the picture… it’s from your Instagram Live, way back on November 18, 2022. You might not remember much from the past, but I do. I’ve been admiring you for a long time, from afar. Not in a way that demands anything—just in a way that sees you, appreciates you, and hopes you’re doing okay.<br>
+
+<br>
+You said you hope I find the courage to come up to you one day. I hope so too. But for now, this is how I’ll introduce myself—through this space, this little corner I made just for you. I don’t know how to update you when I write something new, but I’ll use this ngl link so you’ll always know when there’s an entry waiting for you.<br>
+
+<br>
+Thank you for being here. And more than that—thank you for being you.<br>
+
+                            </tr>
+                            <!-- ⏹️ end one row -->
+                        </table>
+                        <!---- end bullet points ---->
+                        
+                        <p>
+                        
+                        —From someone who has been quietly rooting for you, <special>always.</special><br>
+                        
+                        <br>
+P.S. I'm working on adding a 'Poems' section soon for the poems I've written for you. I’ll also be changing the layout of the 'Letters' section and adding more sections over time. I’m not sure how to update you, but that’s okay—if you see this, well… you've seen it! Hahaha.<br>
+                        
+                    </div><!--do not delete this line-->
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+                    
+                    <!------ END A CHARACTER'S INFO ------>
+                   
+                    <!------ START A CHARACTER'S INFO ------>
+                    <!-- 👇👇👇👇👇👇👇 -->
+ 
+                    <div character-id="2" class="bio-text">
+                        <!---- start bullet points ---->
+                        <table>
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+                        </table>
+                        <!---- end bullet points ---->
+ 
+                        <p>
+ 
+                        🔒 <special> 🔒 </special>
+ 
+                    </div><!--do not delete this line-->
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+ 
+                    <!------ END A CHARACTER'S INFO ------>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                    <!------ START A CHARACTER'S INFO ------>
+                    <!-- 👇👇👇👇👇👇👇 -->
+ 
+                    <div character-id="3" class="bio-text">
+                        <!---- start bullet points ---->
+                        <table>
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+                        </table>
+                        <!---- end bullet points ---->
+ 
+                        <p>
+ 
+                        🔒 <special> 🔒 </special>!
+ 
+                    </div><!--do not delete this line-->
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+ 
+                    <!------ END A CHARACTER'S INFO ------>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                    <!------ START A CHARACTER'S INFO ------>
+                    <!-- 👇👇👇👇👇👇👇 -->
+ 
+                    <div character-id="4" class="bio-text">
+                        <!---- start bullet points ---->
+                        <table>
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+ 
+ 
+                            <!-- 👇 start one row -->
+                            <tr>
+                                <td><div class="curse"></div>
+                                <td label> 🔒
+                                <td> 🔒
+                            </tr>
+                            <!-- ⏹️ end one row -->
+                        </table>
+                        <!---- end bullet points ---->
+ 
+                        <p>
+ 
+                        🔒 <special> 🔒 </special>!
+ 
+                    </div><!--do not delete this line-->
+                    <!-- ⏹️⏹️⏹️⏹️⏹️⏹️⏹️ -->
+ 
+                    <!------ END A CHARACTER'S INFO ------>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                    </div><!--end all text--><!--don't remove this line-->
+                    <!--do not delete below this line-->
+                </div><!--flounder-->
+                </div><!--arctic-char-->
+ 
+                <div class="theres-more-soup">
+                    <div class="why-are-you-buying-clothes"></div>
+                    <div class="at-the-soup-store"></div>
+                </div>
+            </div><!--oilsardine-->
+            </div><!--baskingshark-->
+ 
+        </div><!--koi-->
+        </div><!--info-box-->
+    </div><!--uhhh-->
+    </div><!--houh-->
+</div><!--le-main-->
+ 
+ 
+<div class="decoline-bot">
+    <div class="une-biere"></div>
+    <div class="4">
+    <div class="sauce">
+        <div class="bestfish">
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span><span>∵</span><span>∵</span>
+            <span>∵</span><span>∵</span><span>∵</span>
+        </div>
+    </div>
+    </div>
+</div>
+ 
+ 
+<div id="ohnines"></div>
+<div id="pod069"></div>
+ 
+</body>
+ 
+</html>
