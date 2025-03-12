@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<body>
+<head>
+
+        <style>
+        body {
+background: url(https://mypillowfort.nekoweb.org/templates/milo/bg6.gif);
+  background-size: 150px;
+  margin: 0;
+  image-rendering: pixelated;
+  font-family: 'plushie', ms ui gothic, ms pgothic, sans-serif;
+}
+::selection {
+  background-color: #FFBEBD95;
+    text-shadow: 1px 1px white;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: 0px 0px 5px 0px #EA762380 inset;
+  background-color: #FAFFD9;
+  border: 1px solid #EA7623;
+  border-radius: 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(255,246,238);
+background: linear-gradient(0deg, rgba(255,246,238,1) 0%, rgba(255,194,219,1) 7%, rgba(254,176,204,1) 22%, rgba(252,163,192,1) 32%, rgba(252,163,192,1) 33%, rgba(250,154,184,1) 51%, rgba(252,163,192,1) 69%, rgba(252,163,192,1) 71%, rgba(254,176,204,1) 78%, rgba(255,194,219,1) 93%, rgba(255,246,238,1) 100%);
+  border-radius: 1px;
+  border: 1px solid #EA2E83;
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,1) inset;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(255,246,238);
+background: linear-gradient(180deg, rgba(254,255,234,1) 0%, rgba(248,185,205,1) 7%, rgba(255,241,221,1) 22%, rgba(250,251,220,1) 32%, rgba(229,253,213,1) 41%, rgba(199,244,215,1) 54%, rgba(197,240,228,1) 62%, rgba(194,234,244,1) 74%, rgba(173,205,255,1) 87%, rgba(217,183,255,1) 94%, rgba(237,255,239,1) 100%);
+  border-radius: 1px;
+  border: 1px solid #EA2E83;
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,1) inset;
+}
+
+.layout {
+display: flex;
+margin: 0rem;
+  justify-content: center;
+align-items: center;
+  height: 95vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 120px 95px 328px 175px;
+  margin: auto;
+  height: 34rem;
+  width: 45rem;
+  grid-template-rows: 120px 180px 180px 50px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "clock ban ban ban"
+    "nav top top box1"
+    "nav main main box2"
+    "nav cred1 cred cred";
+  gap: 5px 5px;
+  padding: 5px;
+}
+
+.clock {
+  grid-area: clock;
+box-shadow: 0px 0px 0px 1px #683311 inset;
+  border-radius: 100%;
+  color: #683311;
+  width: 85%;
+  transform: rotate(-3deg);
+  height: 85%;
+position: relative;
+top: 20px;
+left: 5px;
+  border: solid 5px #B5E84F;
+  outline: 1px solid #683311;
+  background: #FFFCDD;
+  text-align: center;
+line-height: 100px;
+  font-family: plushie, ms pgothic, ms ui gothic, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+
+.clock::after {
+  border: solid 5px #B5E84F;
+  outline: 1px solid #683311;
+  background: #FFFCDD;
+  content: '    ...';
+  color: transparent;
+  position: relative;
+top: -52px;
+  left: 36px;
+  padding: 7px;
+  margin-left: -42px;
+  z-index: 1;
+  height: 70px;
+  width: 70px !important;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 1px #683311 inset, 0px 0px 0px 8px #FFFCDD inset, 0px 0px 0px 50px #683311 inset;
+}
+
+.clock::before {
+  border: solid 5px #B5E84F;
+  outline: 1px solid #683311;
+  background: #FFFCDD;
+  content: '    ....';
+  color: transparent;
+  position: relative;
+top: -52px;
+  left: 7.5px;
+  padding: 7px;
+  margin-left: -41px;
+  z-index: 1;
+  height: 70px;
+  width: 70px !important;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 1px #683311 inset, 0px 0px 0px 8px #FFFCDD inset, 0px 0px 0px 50px #683311 inset;
+}
+
+.nav {
+  grid-area: nav;
+  position: relative;
+top: -3px;
+}
+
+.top {
+  grid-area: top;
+  BACKGROUND: #FFFCDD;
+  border: 1px solid #683311;
+  box-shadow: 0px -7px 0px 0px inset #B9E879, 0px -14px 0px 0px inset #ECF9A1;
+  height: 35px;
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  color: #FFC4D2;
+text-shadow: 1px 1px 0px #683311, 1px 0px 0px #683311;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.ban {
+  grid-area: ban;
+  box-shadow: 0px 0px 0px 1px #FFF8CC inset;
+  border: 1px solid #683311;
+  height: 60%;
+  position: relative;
+top: 40%;
+background: rgb(255,237,243);
+background: radial-gradient(circle, rgba(255,237,243,1) 45%, rgba(255,224,231,1) 45%, rgba(255,224,231,1) 56%, rgba(236,249,161,1) 57%, rgba(236,249,161,1) 91%, rgba(185,232,121,1) 91%);
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  color: #FFC4D2;
+text-shadow: 1px 1px 0px #683311, 1px 0px 0px #683311;
+  font-weight: bold;
+}
+
+.ban::before {
+  line-height: 0px;
+  font-size: 80px;
+  font-family: times new roman;
+font-weight: bold;
+content: 'Carl';
+  font-style: italic;
+letter-spacing: 8px;
+  position: relative;
+top: -10px;
+  left: 30px;
+ text-shadow: none;
+background: rgb(247,136,163);
+background: linear-gradient(0deg, rgba(247,136,163,1) 16%, rgba(255,115,150,1) 37%, rgba(255,113,149,1) 44%, rgba(255,143,170,1) 48%, rgba(255,143,170,1) 59%, rgba(255,201,214,1) 100%);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+  
+  
+  
+filter: drop-shadow(1px 1px 0px #683311);
+}
+
+.cred1 {
+  grid-area: cred1; 
+  color: #FFC0CF;
+text-shadow: 1px 1px 1px #683311;
+  font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+text-align: right;
+font-size: 12px;
+  font-weight: bold;
+}
+
+.box1 {
+    grid-area: box1;
+    padding-top: -3px;
+    padding-left: 1px;
+    position: relative;
+    top: 0px;
+}
+
+.cred {
+  grid-area: cred;
+ border: 1px solid #683311;
+  box-shadow: 0px 0px 0px 3px inset #FFB9CA, 0px 0px 0px 6px inset #FFF2A8;
+  background: #FFFCDD;
+    color: #683311;
+  font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  height: 70%;
+  line-height: 32px;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  height: 323px;
+  position: relative;
+  overflow: hidden;
+top: -145px;
+  border: 1px solid #683311;
+  box-shadow: 0px 0px 0px 3px inset #FFB9CA, 0px 0px 0px 6px inset #D0F582, 0px 0px 0px 9px inset #FFF2A8;
+  background: #FFFCDD;
+    color: #683311;
+  font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+}
+
+.textbox {
+margin: 10px;
+  margin-right: 3px;
+overflow: auto;
+  overflow-x: hidden;
+  height: 302px;
+}
+
+.box2 {
+  grid-area: box2;
+ border: 1px solid #683311;
+  box-shadow: 0px 0px 0px 3px inset #D0F582, 0px 0px 0px 6px inset #FFF2A8;
+  background: #FFFCDD;
+  padding: 13px;
+    color: #683311;
+    height: 80%; position: relative; font-family: plushie, ms ui gothic, ms pgothic, sans-serif; top: 8px;
+}
+
+.top1 {
+text-align: center;
+background: rgb(247,136,163);
+background: linear-gradient(0deg, rgba(247,136,163,1) 16%, rgba(255,115,150,1) 37%, rgba(255,113,149,1) 44%, rgba(255,143,170,1) 48%, rgba(255,143,170,1) 59%, rgba(255,201,214,1) 100%);
+  color: #FFFCDD;
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #683311, 1px 0px #683311;
+  height: 40px;
+  line-height: 37px;
+  box-shadow: 0px 0px 0px 1px #FFF8CC inset;
+  border: 1px solid #683311;
+border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+background: rgb(254,227,135);
+background: linear-gradient(0deg, rgba(254,227,135,1) 16%, rgba(255,211,115,1) 37%, rgba(255,220,113,1) 44%, rgba(255,239,143,1) 48%, rgba(255,239,143,1) 59%, rgba(255,244,201,1) 100%);
+    color: #FFFCDD;
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #683311, 1px 0px #683311;
+  height: 33px;
+  line-height: 30px;
+  box-shadow: 0px 0px 0px 1px #FFF8CC inset;
+  border: 1px solid #683311;
+    border-top: transparent 1px solid;
+  text-align: center;
+}
+
+
+
+.green {
+background: rgb(202,233,126);
+background: linear-gradient(0deg, rgba(202,233,126,1) 16%, rgba(181,233,112,1) 37%, rgba(185,241,114,1) 44%, rgba(208,246,133,1) 48%, rgba(208,245,129,1) 59%, rgba(242,255,197,1) 100%);
+    color: #FFFCDD;
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #683311, 1px 0px #683311;
+  height: 33px;
+  line-height: 30px;
+  box-shadow: 0px 0px 0px 1px #FFF8CC inset;
+  border: 1px solid #683311;
+    border-top: transparent 1px solid;
+  text-align: center;
+}
+
+.bottom1 {
+text-align: center;
+background: rgb(247,136,163);
+background: linear-gradient(0deg, rgba(247,136,163,1) 16%, rgba(255,115,150,1) 37%, rgba(255,113,149,1) 44%, rgba(255,143,170,1) 48%, rgba(255,143,170,1) 59%, rgba(255,201,214,1) 100%);
+  color: #FFFCDD;
+font-family: plushie, ms ui gothic, ms pgothic, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #683311, 1px 0px #683311;
+  height: 40px;
+  line-height: 37px;
+  box-shadow: 0px 0px 0px 1px #FFF8CC inset;
+  border: 1px solid #683311;
+border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top: transparent;
+}
+
+.marq {
+animation-name: marq;
+  display: block;
+position: relative;
+    animation-duration: 2s;
+
+  animation: 1.75s linear .1s marq;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marq {
+  0% { left: 2px; }
+  50% { left: 70px; }
+    100% { left: 2px; }
+}
+
+a {
+color: #3897B5;
+}
+
+a:visited {
+color: #3897B5;
+}
+
+a.nav {
+color: #FFFCDD !important;
+  text-decoration: none;
+ position: relative;
+top: 0px;
+}
+
+        </style>
+        </head>
+        <body>
+        <div class="layout">
+   <script>
+    function clock() {// We create a new Date object and assign it to a variable called "time".
+var time = new Date(),
+    
+    // Access the "getHours" method on the Date object with the dot accessor.
+    hours = time.getHours(),
+    
+    // Access the "getMinutes" method with the dot accessor.
+    minutes = time.getMinutes(),
+    
+    
+    seconds = time.getSeconds();
+
+document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+  
+  function harold(standIn) {
+    if (standIn < 10) {
+      standIn = '0' + standIn
+    }
+    return standIn;
+  }
+}
+setInterval(clock, 1000);
+</script>
+<div class="grid">
+  <div class="clock"></div>
+  <div class="nav">
+    
+    <div class="top1">
+      navigation
+    </div>
+    <div class="green">
+<a href="https://mhuenocskiy.neocities.org/update" class="nav">Updates!</a>
+</div>
+        <div class="yellow">
+<a href="https://mhuenocskiy.neocities.org/Letters" class="nav">Letters</a>
+</div>
+        <div class="green">
+<a href="#" class="nav">Poems</a>
+</div>
+        <div class="yellow">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+        <div class="green">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+        <div class="yellow">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+            <div class="green">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+            <div class="yellow">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+            <div class="green">
+<a href="#" class="nav">🚧💖🏗️✨</a>
+</div>
+        <div class="bottom1">
+      tank yew~
+    </div>
+    
+    
+    
+  </div>
+  <div class="top">
+<span class="marq">
+For Carl Only!   For Carl Only!   For Carl Only!   </span>
+    
+</div>
+    <div class="main"><div class="textbox">
+Hey Carl, Welcome!<br><br>
+        
+<br>
+This space is a quiet little corner where thoughts linger, words are left unspoken, and feelings find a home.
+<br>
+      <img src="https://mypillowfort.net/media2/tumblr_77d17e077a3f5dc583c613f395f2e7b4_6d1593e5_250.gif" style="float: left;"><br>
+Maybe you'll read between the lines, maybe you won’t—but that’s okay.
+<br><br>
+Just know this exists, and so do you.
+<br><br>
+    You bring light in ways you don’t always see, and even on the days when the weight of the world feels heavy, you are never alone. Your presence matters, your feelings are valid, and you deserve all the kindness you give to others.
+<br>
+<br>
+Stay as long as you like
+<br><br>
+And Carl, if you're here... thank you. For just being you. You are valued, more than you might realize. Leave a thought if you want. Either way, I’m glad you’re here. No matter what, I’m just really, really glad you’re here..
+<br><br>
+ I already have an entry, just click the first one, might update it if you respond.
+<br>
+
+    </div></div>
+  <div class="ban">
+    chaehuenoski
+</div>
+  <div class="cred1">
+Made by ZixuS
+    <span style="color: #FFFF8E;"> Will Update</span> <u  style="color: #D4F78A;"> More Soon!</u>
+    
+  </div>
+  <div class="box1">
+    <iframe src="https://mypillowfort.net/templates/milo/calender.html" frameborder="0" scrolling="no" height="190px"></iframe>
+  </div>
+  <div class="cred">
+    
+    MCYHuenoski
+    
+  </div>
+    <div class="box2">
+
+    <span style="color: #FF00FF;"> Any Thoughts? </span> <br> <a href="https://docs.google.com/forms/d/e/1FAIpQLSekc5u-0uK0FN6WgFeh8wlRxH6R5CezxebifC0r2YVqhNlihQ/viewform" style="color: #FF46A2;"> Click Here! </a>
+    
+</div>
+</div>
+ 
+</div>
+    </body>
+    
